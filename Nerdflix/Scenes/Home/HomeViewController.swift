@@ -9,8 +9,12 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate{
+   
+    
     
     // MARK: - Variables & Attributes
+    
+    private var viewModel: HomeViewModel = HomeViewModel()
     
     var arrayCategory : [String] = ["Para você", "Filmes mais vistos", "Filmes premiados" ]
     
@@ -28,6 +32,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
+        self.tableView.dataSource = self
         setupUI()
 
     }
@@ -41,12 +46,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationController?.navigationBar.tintColor = .white
         
         tableView.register(UINib(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryTableViewCell")
-        tableView.dataSource = self
         tableView.reloadData()
 
     }
+ 
     
-        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         arrayCategory.count
     }
@@ -64,5 +68,4 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
 }
-
 

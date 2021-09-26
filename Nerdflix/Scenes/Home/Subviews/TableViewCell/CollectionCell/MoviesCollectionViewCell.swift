@@ -21,7 +21,17 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     // MARK: - Ouverrides
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     
     }
-
+    // MARK: - Methods
+    
+    func setupModel(_ movie: MovieItemModel?) {
+        guard let movieModel = movie else {return}
+        
+        labelMovieTitle.text = movieModel.fullTitle
+        
+    }
+    
+    
 }

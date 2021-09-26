@@ -28,8 +28,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uu-Df-3Pp">
-                                <rect key="frame" x="1" y="209" width="39.5" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <rect key="frame" x="1" y="209" width="142" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -39,6 +39,7 @@
                             <constraint firstAttribute="trailing" secondItem="DHH-8x-VUt" secondAttribute="trailing" constant="1" id="9Mo-OF-A5G"/>
                             <constraint firstItem="4uu-Df-3Pp" firstAttribute="top" secondItem="DHH-8x-VUt" secondAttribute="bottom" constant="8" id="DRy-3a-MrD"/>
                             <constraint firstItem="DHH-8x-VUt" firstAttribute="leading" secondItem="Pus-yX-UKP" secondAttribute="leading" constant="1" id="bTM-WC-FSd"/>
+                            <constraint firstAttribute="trailing" secondItem="4uu-Df-3Pp" secondAttribute="trailing" constant="8" id="c0g-A6-KwN"/>
                             <constraint firstItem="DHH-8x-VUt" firstAttribute="top" secondItem="Pus-yX-UKP" secondAttribute="top" constant="1" id="g9z-Kh-Bh7"/>
                             <constraint firstItem="4uu-Df-3Pp" firstAttribute="leading" secondItem="DHH-8x-VUt" secondAttribute="leading" id="p9n-ho-ecH"/>
                         </constraints>

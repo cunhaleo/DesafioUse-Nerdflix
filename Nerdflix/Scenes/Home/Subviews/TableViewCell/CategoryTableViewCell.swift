@@ -10,6 +10,12 @@ import UIKit
 
 class CategoryTableViewCell: UITableViewCell {
     
+    
+    //MARK: - Attributes & Variables
+    
+    
+    private var viewModel: HomeViewModel = HomeViewModel()
+    
     // MARK: - Outlets
     
     @IBOutlet weak var labelCategoria: UILabel!
@@ -19,7 +25,11 @@ class CategoryTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        bindEvents()
+        viewModel.getPopularMovies()
+       // viewModel.getMoviesList()
         setupCollectionView()
+
         
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,8 +39,22 @@ class CategoryTableViewCell: UITableViewCell {
     }
     // MARK: - Methods
     
+ 
+    
+    func bindEvents() {
+    viewModel.updateLayout = { [weak self] in
+            DispatchQueue.main.async {
+                print("TRATOU O MODEL NO CATEGORY")                                             // COMMENTARIOS
+                print("getMovies:", self?.viewModel.getMoviesQuantity())
+                self?.moviesCollectionView.reloadData()
+            }
+        
+        }
+   }
+
     func setupCell(categoria: String){ // Label categoria e botão ver mais
         labelCategoria.text = categoria
+        
         
     }
     func setupCollectionView() {
@@ -57,13 +81,15 @@ extension CategoryTableViewCell: UICollectionViewDataSource, UICollectionViewDel
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return viewModel.getMoviesQuantity()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let item = viewModel.getMovieAt(indexPath.item)
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoviesCollectionViewCell", for: indexPath) as? MoviesCollectionViewCell else {
             return UICollectionViewCell.init(frame: .zero)
         }
+        cell.setupModel(item)
         return cell
     }
 }
