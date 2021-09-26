@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		90734E5826FFB72900B34B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90734E5726FFB72900B34B77 /* AppDelegate.swift */; };
-		90734E5A26FFB72900B34B77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90734E5926FFB72900B34B77 /* SceneDelegate.swift */; };
-		90734E5C26FFB72900B34B77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90734E5B26FFB72900B34B77 /* ViewController.swift */; };
-		90734E5F26FFB72900B34B77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90734E5D26FFB72900B34B77 /* Main.storyboard */; };
 		90734E6226FFB72900B34B77 /* Nerdflix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90734E6026FFB72900B34B77 /* Nerdflix.xcdatamodeld */; };
 		90734E6426FFB73000B34B77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90734E6326FFB73000B34B77 /* Assets.xcassets */; };
 		90734E6726FFB73000B34B77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90734E6526FFB73000B34B77 /* LaunchScreen.storyboard */; };
+		90734E7526FFB86200B34B77 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90734E7326FFB86200B34B77 /* HomeViewController.swift */; };
+		90734E7626FFB86200B34B77 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90734E7426FFB86200B34B77 /* HomeViewController.xib */; };
+		90734E8626FFC29700B34B77 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90734E8426FFC29700B34B77 /* CategoryTableViewCell.swift */; };
+		90734E8726FFC29700B34B77 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90734E8526FFC29700B34B77 /* CategoryTableViewCell.xib */; };
+		90734E8A26FFC2C300B34B77 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90734E8826FFC2C300B34B77 /* MoviesCollectionViewCell.swift */; };
+		90734E8B26FFC2C300B34B77 /* MoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90734E8926FFC2C300B34B77 /* MoviesCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		90734E5426FFB72900B34B77 /* Nerdflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nerdflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90734E5726FFB72900B34B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90734E5926FFB72900B34B77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		90734E5B26FFB72900B34B77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		90734E5E26FFB72900B34B77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90734E6126FFB72900B34B77 /* Nerdflix.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nerdflix.xcdatamodel; sourceTree = "<group>"; };
 		90734E6326FFB73000B34B77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90734E6626FFB73000B34B77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90734E6826FFB73000B34B77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90734E7326FFB86200B34B77 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		90734E7426FFB86200B34B77 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		90734E8426FFC29700B34B77 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		90734E8526FFC29700B34B77 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		90734E8826FFC2C300B34B77 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
+		90734E8926FFC2C300B34B77 /* MoviesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,99 @@
 		90734E5626FFB72900B34B77 /* Nerdflix */ = {
 			isa = PBXGroup;
 			children = (
-				90734E5726FFB72900B34B77 /* AppDelegate.swift */,
-				90734E5926FFB72900B34B77 /* SceneDelegate.swift */,
-				90734E5B26FFB72900B34B77 /* ViewController.swift */,
-				90734E5D26FFB72900B34B77 /* Main.storyboard */,
-				90734E6326FFB73000B34B77 /* Assets.xcassets */,
-				90734E6526FFB73000B34B77 /* LaunchScreen.storyboard */,
-				90734E6826FFB73000B34B77 /* Info.plist */,
-				90734E6026FFB72900B34B77 /* Nerdflix.xcdatamodeld */,
+				90734E7226FFB79600B34B77 /* Commons */,
+				90734E7126FFB79400B34B77 /* Scenes */,
+				90734E7026FFB79300B34B77 /* Sources */,
+				90734E6F26FFB79100B34B77 /* Resources */,
 			);
 			path = Nerdflix;
+			sourceTree = "<group>";
+		};
+		90734E6F26FFB79100B34B77 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				90734E6526FFB73000B34B77 /* LaunchScreen.storyboard */,
+				90734E6326FFB73000B34B77 /* Assets.xcassets */,
+				90734E6026FFB72900B34B77 /* Nerdflix.xcdatamodeld */,
+				90734E6826FFB73000B34B77 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		90734E7026FFB79300B34B77 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				90734E5726FFB72900B34B77 /* AppDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		90734E7126FFB79400B34B77 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				90734E7926FFB8AF00B34B77 /* Details */,
+				90734E7826FFB8AC00B34B77 /* New Group */,
+				90734E7726FFB89400B34B77 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		90734E7226FFB79600B34B77 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		90734E7726FFB89400B34B77 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				90734E7326FFB86200B34B77 /* HomeViewController.swift */,
+				90734E7426FFB86200B34B77 /* HomeViewController.xib */,
+				90FF5F7B26FFDC5C0032CAC4 /* Subviews */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		90734E7826FFB8AC00B34B77 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		90734E7926FFB8AF00B34B77 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		90734E7A26FFBE2600B34B77 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				90734E8426FFC29700B34B77 /* CategoryTableViewCell.swift */,
+				90734E8526FFC29700B34B77 /* CategoryTableViewCell.xib */,
+				90734E7F26FFC13600B34B77 /* CollectionCell */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		90734E7F26FFC13600B34B77 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				90734E8826FFC2C300B34B77 /* MoviesCollectionViewCell.swift */,
+				90734E8926FFC2C300B34B77 /* MoviesCollectionViewCell.xib */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		90FF5F7B26FFDC5C0032CAC4 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				90734E7A26FFBE2600B34B77 /* TableViewCell */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,8 +218,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				90734E6726FFB73000B34B77 /* LaunchScreen.storyboard in Resources */,
+				90734E8726FFC29700B34B77 /* CategoryTableViewCell.xib in Resources */,
+				90734E8B26FFC2C300B34B77 /* MoviesCollectionViewCell.xib in Resources */,
 				90734E6426FFB73000B34B77 /* Assets.xcassets in Resources */,
-				90734E5F26FFB72900B34B77 /* Main.storyboard in Resources */,
+				90734E7626FFB86200B34B77 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +232,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90734E5C26FFB72900B34B77 /* ViewController.swift in Sources */,
+				90734E8626FFC29700B34B77 /* CategoryTableViewCell.swift in Sources */,
 				90734E6226FFB72900B34B77 /* Nerdflix.xcdatamodeld in Sources */,
 				90734E5826FFB72900B34B77 /* AppDelegate.swift in Sources */,
-				90734E5A26FFB72900B34B77 /* SceneDelegate.swift in Sources */,
+				90734E7526FFB86200B34B77 /* HomeViewController.swift in Sources */,
+				90734E8A26FFC2C300B34B77 /* MoviesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		90734E5D26FFB72900B34B77 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				90734E5E26FFB72900B34B77 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		90734E6526FFB73000B34B77 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,7 +374,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UYU42XWBK4;
-				INFOPLIST_FILE = Nerdflix/Info.plist;
+				INFOPLIST_FILE = Nerdflix/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aprendendo.Nerdflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,7 +393,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UYU42XWBK4;
-				INFOPLIST_FILE = Nerdflix/Info.plist;
+				INFOPLIST_FILE = Nerdflix/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +402,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aprendendo.Nerdflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
