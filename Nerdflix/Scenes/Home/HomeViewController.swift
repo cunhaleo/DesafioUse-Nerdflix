@@ -16,7 +16,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     private var viewModel: HomeViewModel = HomeViewModel()
     
-    var arrayCategory : [String] = ["Para você", "Filmes mais vistos", "Filmes premiados" ]
+    var arrayCategory : [String] = ["Filmes mais premiados", "Séries de TV", "Filmes populares" ]
     
 
     
@@ -57,7 +57,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
           
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell") as? CategoryTableViewCell {
-            cell.setupCell(categoria: arrayCategory[indexPath.row])
+            cell.setupCell(categoria: arrayCategory[indexPath.row], index: indexPath.row)
             return cell
         }
         return UITableViewCell()

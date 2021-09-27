@@ -25,6 +25,7 @@
 		90D62D5827015B440081D2F5 /* VerMaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D62D5627015B440081D2F5 /* VerMaisViewController.swift */; };
 		90D62D5927015B440081D2F5 /* VerMaisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D62D5727015B440081D2F5 /* VerMaisViewController.xib */; };
 		90D62D5A27015E660081D2F5 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90734E8426FFC29700B34B77 /* CategoryTableViewCell.swift */; };
+		90D62D5C27016D430081D2F5 /* DetalhesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D62D5B27016D430081D2F5 /* DetalhesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		90D62D5327015B1C0081D2F5 /* DetalhesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViewModel.swift; sourceTree = "<group>"; };
 		90D62D5627015B440081D2F5 /* VerMaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerMaisViewController.swift; sourceTree = "<group>"; };
 		90D62D5727015B440081D2F5 /* VerMaisViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerMaisViewController.xib; sourceTree = "<group>"; };
+		90D62D5B27016D430081D2F5 /* DetalhesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesModel.swift; sourceTree = "<group>"; };
 		EBE1B0696522ED441ACD741C /* Pods-Nerdflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nerdflix.debug.xcconfig"; path = "Target Support Files/Pods-Nerdflix/Pods-Nerdflix.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +190,7 @@
 		90D62D4E27015ADB0081D2F5 /* Detalhes */ = {
 			isa = PBXGroup;
 			children = (
+				90D62D5B27016D430081D2F5 /* DetalhesModel.swift */,
 				90D62D5327015B1C0081D2F5 /* DetalhesViewModel.swift */,
 				90D62D4F27015AEF0081D2F5 /* DetalhesViewController.swift */,
 				90D62D5027015AEF0081D2F5 /* DetalhesViewController.xib */,
@@ -333,6 +336,7 @@
 			files = (
 				90D62D5127015AEF0081D2F5 /* DetalhesViewController.swift in Sources */,
 				90D62D5827015B440081D2F5 /* VerMaisViewController.swift in Sources */,
+				90D62D5C27016D430081D2F5 /* DetalhesModel.swift in Sources */,
 				908367EB27000D95000BC590 /* HomeViewModel.swift in Sources */,
 				90734E6226FFB72900B34B77 /* Nerdflix.xcdatamodeld in Sources */,
 				908367F02700140A000BC590 /* MoviesModel.swift in Sources */,

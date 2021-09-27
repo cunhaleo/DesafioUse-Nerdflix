@@ -11,11 +11,13 @@ import UIKit
 class CategoryTableViewCell: UITableViewCell, UINavigationControllerDelegate {
     
     
+    
+    
     //MARK: - Attributes & Variables
     
     
     private var viewModel: HomeViewModel = HomeViewModel()
-    
+    private var index: Int = 0
     // MARK: - Outlets & Actions
     
     @IBOutlet weak var labelCategoria: UILabel!
@@ -29,7 +31,8 @@ class CategoryTableViewCell: UITableViewCell, UINavigationControllerDelegate {
         super.awakeFromNib()
         bindEvents()
         viewModel.getPopularMovies()
-       // viewModel.getMoviesList()
+        viewModel.getTvShowMovies()
+        viewModel.getTopMovies()
         setupCollectionView()
 
         
@@ -50,16 +53,16 @@ class CategoryTableViewCell: UITableViewCell, UINavigationControllerDelegate {
     func bindEvents() {
     viewModel.updateLayout = { [weak self] in
             DispatchQueue.main.async {
-                print("TRATOU O MODEL NO CATEGORY")                                             // COMMENTARIOS
-                print("getMovies:", self?.viewModel.getMoviesQuantity())
+                print("Dentro de category, index:\(self?.index) ")                                             // COMMENTARIOS
                 self?.moviesCollectionView.reloadData()
             }
         
         }
    }
 
-    func setupCell(categoria: String){ // Label categoria e botão ver mais
+    func setupCell(categoria: String, index: Int){ // Label categoria e botão ver mais
         labelCategoria.text = categoria
+        self.index = index
         
         
     }
@@ -78,7 +81,7 @@ class CategoryTableViewCell: UITableViewCell, UINavigationControllerDelegate {
 extension CategoryTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = viewModel.getMovieAt(indexPath.item)
+        let item = viewModel.getMovieAt(index: self.index, indexCollection: indexPath.item)
         let movieId = item.id
         showMovieDetails(movieId)
     }
@@ -93,11 +96,11 @@ extension CategoryTableViewCell: UICollectionViewDataSource, UICollectionViewDel
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.getMoviesQuantity()
+        return viewModel.getMoviesQuantity(index: self.index)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = viewModel.getMovieAt(indexPath.item)
+        let item = viewModel.getMovieAt(index: self.index, indexCollection: indexPath.item)
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoviesCollectionViewCell", for: indexPath) as? MoviesCollectionViewCell else {
             return UICollectionViewCell.init(frame: .zero)
         }
