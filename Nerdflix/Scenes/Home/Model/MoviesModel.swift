@@ -17,7 +17,7 @@ struct MoviesModel: Codable {
 struct MovieItemModel: Codable {
     let fullTitle: String?
     let image: String?
-    
+    let id: String?
     
     
     

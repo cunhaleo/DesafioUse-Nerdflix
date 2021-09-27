@@ -39,7 +39,11 @@ class CategoryTableViewCell: UITableViewCell {
     }
     // MARK: - Methods
     
- 
+    private func showMovieDetails(_ id: String?) {
+         guard let idValue = id else {return}
+         let controller = DetalhesViewController(idValue)
+         //navigationController?.pushViewController(controller, animated: true)
+    }
     
     func bindEvents() {
     viewModel.updateLayout = { [weak self] in
@@ -70,6 +74,12 @@ class CategoryTableViewCell: UITableViewCell {
     }
 }
 extension CategoryTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = viewModel.getMovieAt(indexPath.item)
+        let movieId = item.id
+        showMovieDetails(movieId)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 20
