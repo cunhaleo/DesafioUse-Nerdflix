@@ -19,6 +19,8 @@ class HomeViewModel {
     var shouldShowErrorMessage: ((String) -> Void)?
     let arrayRequest: [String] = ["https://imdb-api.com/en/API/Top250Movies/k_l8tyyqy7"]
     
+   // MARK: - Methods
+    
     func getMoviesQuantity(index: Int) -> Int {
         if index == 0 {
             return popularMovies.count
@@ -63,7 +65,7 @@ class HomeViewModel {
                     }
                 }
             }
-        func getTvShowMovies() {
+    func getTvShowMovies() {
         
             AF.request("https://imdb-api.com/en/API/Top250TVs/k_1ff4k2v8", method: .get).responseJSON{ (response) in
              //   debugPrint("==> RESPONSE:", response)
@@ -78,7 +80,7 @@ class HomeViewModel {
                     }
                 }
             }
-        func getTopMovies() {
+    func getTopMovies() {
         
             AF.request("https://imdb-api.com/en/API/Top250Movies/k_1ff4k2v8", method: .get).responseJSON{ (response) in
             //    debugPrint("==> RESPONSE:", response)

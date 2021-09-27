@@ -8,10 +8,18 @@
 
 import Foundation
 
-struct DetalhesMovieModel: Codable {
-    let actors: [String]
+struct DetailsModel: Codable {
+    
+    let actors: [ActorModel]?
+    
+    
+}
+
+
+struct ActorModel: Codable {
+    
+    let name: String?
     let image: String?
-    let id: String?
     
     
     

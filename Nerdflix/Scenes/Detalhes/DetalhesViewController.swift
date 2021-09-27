@@ -12,7 +12,13 @@ class DetalhesViewController: UIViewController {
 
     private var viewModel: DetalhesViewModel = DetalhesViewModel()
     private var movieId: String = ""
+    
+    // MARK: - Outlets
         
+    @IBOutlet weak var labelActor: UILabel!
+    
+    
+    // MARK: - Overrides
         init(_ id: String) {
             super.init(nibName: nil, bundle: nil)
             self.movieId = id
@@ -26,8 +32,30 @@ class DetalhesViewController: UIViewController {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            title = "Detalhes"
+            bindEvents()
+   //         setupModel()
+            setupUI()
+            print()
         
         }
-    
+    func setupUI() {
+        title = "Detalhes"
+        
+        
     }
+  //  func setupModel() {
+  //      labelActor.text = viewModel.getActorName(0)
+ 
+   // }
+    
+    
+    
+    func bindEvents() {
+    viewModel.updateLayout = { [weak self] in
+            DispatchQueue.main.async {
+                self?.labelActor.reloadInputViews()
+            }
+        }
+    }
+}
+

@@ -34,8 +34,6 @@ class CategoryTableViewCell: UITableViewCell, UINavigationControllerDelegate {
         viewModel.getTvShowMovies()
         viewModel.getTopMovies()
         setupCollectionView()
-
-        
     }
     
     // MARK: - Methods
