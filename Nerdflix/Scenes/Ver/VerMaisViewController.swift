@@ -9,9 +9,18 @@
 import UIKit
 
 class VerMaisViewController: UIViewController {
-
+    
+    init(category: Int) {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }

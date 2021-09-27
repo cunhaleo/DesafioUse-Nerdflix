@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryTableViewCell: UITableViewCell {
+class CategoryTableViewCell: UITableViewCell, UINavigationControllerDelegate {
     
     
     //MARK: - Attributes & Variables
@@ -16,10 +16,12 @@ class CategoryTableViewCell: UITableViewCell {
     
     private var viewModel: HomeViewModel = HomeViewModel()
     
-    // MARK: - Outlets
+    // MARK: - Outlets & Actions
     
     @IBOutlet weak var labelCategoria: UILabel!
     @IBOutlet weak var moviesCollectionView: UICollectionView!
+    
+    
     
     // MARK : - Overrides
 
@@ -32,17 +34,17 @@ class CategoryTableViewCell: UITableViewCell {
 
         
     }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        
-    }
+    
     // MARK: - Methods
     
+    private func verMais() {
+        let controller = VerMaisViewController(category: 0) // adicionar categoria como parametro
+        parentViewController?.navigationController?.pushViewController(controller, animated: true)
+    }
     private func showMovieDetails(_ id: String?) {
          guard let idValue = id else {return}
          let controller = DetalhesViewController(idValue)
-         //navigationController?.pushViewController(controller, animated: true)
+        parentViewController?.navigationController?.pushViewController(controller, animated: true)
     }
     
     func bindEvents() {
@@ -101,5 +103,17 @@ extension CategoryTableViewCell: UICollectionViewDataSource, UICollectionViewDel
         }
         cell.setupModel(item)
         return cell
+    }
+}
+extension UIView {
+    var parentViewController: UIViewController? {
+        var parentResponder: UIResponder? = self
+        while parentResponder != nil {
+            parentResponder = parentResponder!.next
+            if let viewController = parentResponder as? UIViewController {
+                return viewController
+            }
+        }
+        return nil
     }
 }

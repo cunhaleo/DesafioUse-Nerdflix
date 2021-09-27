@@ -10,7 +10,7 @@ import UIKit
 
 class DetalhesViewController: UIViewController {
 
-     private var viewModel: DetalhesViewModel = DetalhesViewModel()
+    private var viewModel: DetalhesViewModel = DetalhesViewModel()
     private var movieId: String = ""
         
         init(_ id: String) {

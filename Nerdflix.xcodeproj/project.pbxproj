@@ -14,7 +14,6 @@
 		90734E6726FFB73000B34B77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90734E6526FFB73000B34B77 /* LaunchScreen.storyboard */; };
 		90734E7526FFB86200B34B77 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90734E7326FFB86200B34B77 /* HomeViewController.swift */; };
 		90734E7626FFB86200B34B77 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90734E7426FFB86200B34B77 /* HomeViewController.xib */; };
-		90734E8626FFC29700B34B77 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90734E8426FFC29700B34B77 /* CategoryTableViewCell.swift */; };
 		90734E8726FFC29700B34B77 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90734E8526FFC29700B34B77 /* CategoryTableViewCell.xib */; };
 		90734E8A26FFC2C300B34B77 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90734E8826FFC2C300B34B77 /* MoviesCollectionViewCell.swift */; };
 		90734E8B26FFC2C300B34B77 /* MoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90734E8926FFC2C300B34B77 /* MoviesCollectionViewCell.xib */; };
@@ -25,6 +24,7 @@
 		90D62D5427015B1C0081D2F5 /* DetalhesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D62D5327015B1C0081D2F5 /* DetalhesViewModel.swift */; };
 		90D62D5827015B440081D2F5 /* VerMaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D62D5627015B440081D2F5 /* VerMaisViewController.swift */; };
 		90D62D5927015B440081D2F5 /* VerMaisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D62D5727015B440081D2F5 /* VerMaisViewController.xib */; };
+		90D62D5A27015E660081D2F5 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90734E8426FFC29700B34B77 /* CategoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -188,9 +188,9 @@
 		90D62D4E27015ADB0081D2F5 /* Detalhes */ = {
 			isa = PBXGroup;
 			children = (
+				90D62D5327015B1C0081D2F5 /* DetalhesViewModel.swift */,
 				90D62D4F27015AEF0081D2F5 /* DetalhesViewController.swift */,
 				90D62D5027015AEF0081D2F5 /* DetalhesViewController.xib */,
-				90D62D5327015B1C0081D2F5 /* DetalhesViewModel.swift */,
 			);
 			path = Detalhes;
 			sourceTree = "<group>";
@@ -332,11 +332,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				90D62D5127015AEF0081D2F5 /* DetalhesViewController.swift in Sources */,
-				90734E8626FFC29700B34B77 /* CategoryTableViewCell.swift in Sources */,
 				90D62D5827015B440081D2F5 /* VerMaisViewController.swift in Sources */,
 				908367EB27000D95000BC590 /* HomeViewModel.swift in Sources */,
 				90734E6226FFB72900B34B77 /* Nerdflix.xcdatamodeld in Sources */,
 				908367F02700140A000BC590 /* MoviesModel.swift in Sources */,
+				90D62D5A27015E660081D2F5 /* CategoryTableViewCell.swift in Sources */,
 				90D62D5427015B1C0081D2F5 /* DetalhesViewModel.swift in Sources */,
 				90734E5826FFB72900B34B77 /* AppDelegate.swift in Sources */,
 				90734E7526FFB86200B34B77 /* HomeViewController.swift in Sources */,
