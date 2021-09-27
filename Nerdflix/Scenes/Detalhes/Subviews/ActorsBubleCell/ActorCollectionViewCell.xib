@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ActorCollectionViewCell" id="gTV-IL-0wX" customClass="ActorCollectionViewCell" customModule="Nerdflix" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="271"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="271"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYH-Ul-Pko">
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="271"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZEe-c8-h03">
+                                <rect key="frame" x="1" y="1" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="ezY-zi-asK"/>
+                                    <constraint firstAttribute="height" constant="120" id="ipM-1R-X8N"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6HC-jk-rtW">
+                                <rect key="frame" x="8" y="146" width="105" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZEe-c8-h03" secondAttribute="trailing" constant="1" id="Qsn-ej-73U"/>
+                            <constraint firstItem="6HC-jk-rtW" firstAttribute="top" secondItem="ZEe-c8-h03" secondAttribute="bottom" constant="8" id="UJa-Gh-03K"/>
+                            <constraint firstItem="ZEe-c8-h03" firstAttribute="leading" secondItem="GYH-Ul-Pko" secondAttribute="leading" constant="1" id="qet-RK-nzO"/>
+                            <constraint firstItem="ZEe-c8-h03" firstAttribute="top" secondItem="GYH-Ul-Pko" secondAttribute="top" constant="1" id="z2I-2I-Aba"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GYH-Ul-Pko" secondAttribute="trailing" id="9gj-hA-g5k"/>
+                <constraint firstAttribute="bottom" secondItem="GYH-Ul-Pko" secondAttribute="bottom" id="dNS-GW-uPt"/>
+                <constraint firstItem="GYH-Ul-Pko" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mXF-WK-ykU"/>
+                <constraint firstItem="GYH-Ul-Pko" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wEJ-sx-FlC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="330" height="271"/>
+            <connections>
+                <outlet property="imageActor" destination="ZEe-c8-h03" id="c3j-KP-1xt"/>
+                <outlet property="labelActorName" destination="6HC-jk-rtW" id="WD3-Lk-k3x"/>
+            </connections>
+            <point key="canvasLocation" x="-207.24637681159422" y="73.995535714285708"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -51,7 +51,6 @@ class CategoryTableViewCell: UITableViewCell, UINavigationControllerDelegate {
     func bindEvents() {
     viewModel.updateLayout = { [weak self] in
             DispatchQueue.main.async {
-                print("Dentro de category, index:\(self?.index) ")                                             // COMMENTARIOS
                 self?.moviesCollectionView.reloadData()
             }
         
@@ -69,7 +68,6 @@ class CategoryTableViewCell: UITableViewCell, UINavigationControllerDelegate {
         moviesCollectionView.dataSource = self
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        //layout.itemSize = CGSize(width: 200, height: 300)
         moviesCollectionView.setCollectionViewLayout(layout, animated: true)
         moviesCollectionView.register(UINib(nibName: "MoviesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MoviesCollectionViewCell")
         

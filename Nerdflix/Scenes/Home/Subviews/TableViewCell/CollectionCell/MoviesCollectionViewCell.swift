@@ -22,7 +22,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     // MARK: - Ouverrides
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        setupUI()
     
     }
     // MARK: - Methods

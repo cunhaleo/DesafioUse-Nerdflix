@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		59AE58FFD055006432D3C4EB /* Pods_Nerdflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4845DBBE9032376D724CBF67 /* Pods_Nerdflix.framework */; };
+		90023B5027022352005A3638 /* ActorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90023B4E27022352005A3638 /* ActorCollectionViewCell.swift */; };
+		90023B5127022352005A3638 /* ActorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90023B4F27022352005A3638 /* ActorCollectionViewCell.xib */; };
 		90734E5826FFB72900B34B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90734E5726FFB72900B34B77 /* AppDelegate.swift */; };
 		90734E6226FFB72900B34B77 /* Nerdflix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90734E6026FFB72900B34B77 /* Nerdflix.xcdatamodeld */; };
 		90734E6426FFB73000B34B77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90734E6326FFB73000B34B77 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		40C45AED9580B0EC61547760 /* Pods-Nerdflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nerdflix.release.xcconfig"; path = "Target Support Files/Pods-Nerdflix/Pods-Nerdflix.release.xcconfig"; sourceTree = "<group>"; };
 		4845DBBE9032376D724CBF67 /* Pods_Nerdflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nerdflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90023B4E27022352005A3638 /* ActorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCollectionViewCell.swift; sourceTree = "<group>"; };
+		90023B4F27022352005A3638 /* ActorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActorCollectionViewCell.xib; sourceTree = "<group>"; };
 		90734E5426FFB72900B34B77 /* Nerdflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nerdflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90734E5726FFB72900B34B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90734E6126FFB72900B34B77 /* Nerdflix.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nerdflix.xcdatamodel; sourceTree = "<group>"; };
@@ -81,6 +85,23 @@
 				40C45AED9580B0EC61547760 /* Pods-Nerdflix.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		90023B4A270222EE005A3638 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				90023B4B27022304005A3638 /* ActorsBubleCell */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		90023B4B27022304005A3638 /* ActorsBubleCell */ = {
+			isa = PBXGroup;
+			children = (
+				90023B4E27022352005A3638 /* ActorCollectionViewCell.swift */,
+				90023B4F27022352005A3638 /* ActorCollectionViewCell.xib */,
+			);
+			path = ActorsBubleCell;
 			sourceTree = "<group>";
 		};
 		90734E4B26FFB72900B34B77 = {
@@ -190,6 +211,7 @@
 		90D62D4E27015ADB0081D2F5 /* Detalhes */ = {
 			isa = PBXGroup;
 			children = (
+				90023B4A270222EE005A3638 /* Subviews */,
 				90D62D5B27016D430081D2F5 /* DetalhesModel.swift */,
 				90D62D5327015B1C0081D2F5 /* DetalhesViewModel.swift */,
 				90D62D4F27015AEF0081D2F5 /* DetalhesViewController.swift */,
@@ -279,6 +301,7 @@
 				90D62D5927015B440081D2F5 /* VerMaisViewController.xib in Resources */,
 				90734E6726FFB73000B34B77 /* LaunchScreen.storyboard in Resources */,
 				90734E8726FFC29700B34B77 /* CategoryTableViewCell.xib in Resources */,
+				90023B5127022352005A3638 /* ActorCollectionViewCell.xib in Resources */,
 				90734E8B26FFC2C300B34B77 /* MoviesCollectionViewCell.xib in Resources */,
 				90734E6426FFB73000B34B77 /* Assets.xcassets in Resources */,
 				90734E7626FFB86200B34B77 /* HomeViewController.xib in Resources */,
@@ -338,6 +361,7 @@
 				90D62D5827015B440081D2F5 /* VerMaisViewController.swift in Sources */,
 				90D62D5C27016D430081D2F5 /* DetalhesModel.swift in Sources */,
 				908367EB27000D95000BC590 /* HomeViewModel.swift in Sources */,
+				90023B5027022352005A3638 /* ActorCollectionViewCell.swift in Sources */,
 				90734E6226FFB72900B34B77 /* Nerdflix.xcdatamodeld in Sources */,
 				908367F02700140A000BC590 /* MoviesModel.swift in Sources */,
 				90D62D5A27015E660081D2F5 /* CategoryTableViewCell.swift in Sources */,

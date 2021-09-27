@@ -14,8 +14,9 @@ class DetalhesViewController: UIViewController {
     private var movieId: String = ""
     
     // MARK: - Outlets
-        
-    @IBOutlet weak var labelActor: UILabel!
+    
+    @IBOutlet weak var actorsCollectionView: UICollectionView!
+    
     
     
     // MARK: - Overrides
@@ -33,9 +34,9 @@ class DetalhesViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             bindEvents()
-   //         setupModel()
+            viewModel.getMoviesDetails(movieId)
             setupUI()
-            print()
+            setupCollectionView()
         
         }
     func setupUI() {
@@ -43,19 +44,54 @@ class DetalhesViewController: UIViewController {
         
         
     }
-  //  func setupModel() {
-  //      labelActor.text = viewModel.getActorName(0)
- 
-   // }
-    
+    func setupCollectionView() {
+        actorsCollectionView.delegate = self
+        actorsCollectionView.dataSource = self
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        actorsCollectionView.setCollectionViewLayout(layout, animated: true)
+        actorsCollectionView.register(UINib(nibName: "ActorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ActorCollectionViewCell")
+        actorsCollectionView.reloadData()
+    }
+
     
     
     func bindEvents() {
     viewModel.updateLayout = { [weak self] in
             DispatchQueue.main.async {
-                self?.labelActor.reloadInputViews()
+                self?.actorsCollectionView.reloadData()
             }
         }
     }
 }
+extension DetalhesViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+            return 20
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: (UIScreen.main.bounds.width/3), height: (UIScreen.main.bounds.width/3))
+        }
+        
+
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return viewModel.getActorsQuantity()
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let actor = viewModel.getActorAt(indexPath.item)
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActorCollectionViewCell", for: indexPath) as? ActorCollectionViewCell else {
+                return UICollectionViewCell.init(frame: .zero)
+            }
+            cell.setupModel(actor: actor)
+            return cell
+        }
+}
+
 

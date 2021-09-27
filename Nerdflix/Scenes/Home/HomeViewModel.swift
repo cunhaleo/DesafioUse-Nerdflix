@@ -17,7 +17,6 @@ class HomeViewModel {
     
     var updateLayout: (() -> Void)?
     var shouldShowErrorMessage: ((String) -> Void)?
-    let arrayRequest: [String] = ["https://imdb-api.com/en/API/Top250Movies/k_l8tyyqy7"]
     
    // MARK: - Methods
     
@@ -52,7 +51,7 @@ class HomeViewModel {
     
     func getPopularMovies() {
             
-            AF.request("https://imdb-api.com/en/API/MostPopularMovies/k_1ff4k2v8", method: .get).responseJSON{ (response) in
+            AF.request("https://imdb-api.com/en/API/MostPopularMovies/k_l8tyyqy7", method: .get).responseJSON{ (response) in
                // debugPrint("==> RESPONSE:", response)
                 guard let data = response.data else {return}
                 
@@ -67,7 +66,7 @@ class HomeViewModel {
             }
     func getTvShowMovies() {
         
-            AF.request("https://imdb-api.com/en/API/Top250TVs/k_1ff4k2v8", method: .get).responseJSON{ (response) in
+            AF.request("https://imdb-api.com/en/API/Top250TVs/k_l8tyyqy7", method: .get).responseJSON{ (response) in
              //   debugPrint("==> RESPONSE:", response)
                 guard let data = response.data else {return}
             
@@ -82,7 +81,7 @@ class HomeViewModel {
             }
     func getTopMovies() {
         
-            AF.request("https://imdb-api.com/en/API/Top250Movies/k_1ff4k2v8", method: .get).responseJSON{ (response) in
+            AF.request("https://imdb-api.com/en/API/Top250Movies/k_l8tyyqy7", method: .get).responseJSON{ (response) in
             //    debugPrint("==> RESPONSE:", response)
                 guard let data = response.data else {return}
             
