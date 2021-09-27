@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MoviesCollectionViewCell: UICollectionViewCell {
 
@@ -26,12 +27,18 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     }
     // MARK: - Methods
     
+   func setupUI() {
+        imageMovie.layer.cornerRadius = 8
+        
+    }
+    
     func setupModel(_ movie: MovieItemModel?) {
         guard let movieModel = movie else {return}
         
         labelMovieTitle.text = movieModel.fullTitle
         
+        guard let urlImage = movie?.image else {return}
+        imageMovie.sd_setImage(with: URL(string: urlImage))
     }
-    
     
 }
