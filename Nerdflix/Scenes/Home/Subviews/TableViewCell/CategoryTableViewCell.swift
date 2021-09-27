@@ -20,6 +20,9 @@ class CategoryTableViewCell: UITableViewCell, UINavigationControllerDelegate {
     private var index: Int = 0
     // MARK: - Outlets & Actions
     
+    @IBAction func buttonVerMais(_ sender: Any) {
+        verMais()
+    }
     @IBOutlet weak var labelCategoria: UILabel!
     @IBOutlet weak var moviesCollectionView: UICollectionView!
     

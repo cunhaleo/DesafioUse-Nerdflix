@@ -31,21 +31,38 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L02-mn-07Z">
-                                <rect key="frame" x="8" y="8" width="87" height="24"/>
+                                <rect key="frame" x="8" y="8" width="315" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7S6-5i-Oua">
+                                <rect key="frame" x="331" y="8" width="80" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="qsI-V2-skS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Ver Mais">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonVerMais:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="J1k-V1-zx9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="280" id="2ZK-sJ-r91"/>
+                            <constraint firstItem="7S6-5i-Oua" firstAttribute="top" secondItem="1V5-hc-Azs" secondAttribute="top" constant="8" id="Dzp-lg-qht"/>
+                            <constraint firstAttribute="trailing" secondItem="7S6-5i-Oua" secondAttribute="trailing" constant="8" id="EK3-mb-lsy"/>
                             <constraint firstAttribute="trailing" secondItem="qQO-g0-2kh" secondAttribute="trailing" id="Kgb-Iw-UJh"/>
+                            <constraint firstItem="qQO-g0-2kh" firstAttribute="top" secondItem="7S6-5i-Oua" secondAttribute="bottom" constant="8" id="M1m-qH-uT9"/>
                             <constraint firstItem="L02-mn-07Z" firstAttribute="top" secondItem="1V5-hc-Azs" secondAttribute="top" constant="8" id="VmN-Nu-Ju4"/>
                             <constraint firstItem="qQO-g0-2kh" firstAttribute="top" secondItem="1V5-hc-Azs" secondAttribute="top" constant="40" id="YJl-nx-HiJ"/>
                             <constraint firstItem="qQO-g0-2kh" firstAttribute="top" secondItem="L02-mn-07Z" secondAttribute="bottom" constant="8" id="lUE-Jt-7Kf"/>
                             <constraint firstItem="qQO-g0-2kh" firstAttribute="leading" secondItem="1V5-hc-Azs" secondAttribute="leading" id="r25-DM-lV1"/>
                             <constraint firstAttribute="bottom" secondItem="qQO-g0-2kh" secondAttribute="bottom" constant="8" id="uq5-dT-nfo"/>
+                            <constraint firstItem="7S6-5i-Oua" firstAttribute="leading" secondItem="L02-mn-07Z" secondAttribute="trailing" constant="8" id="uuq-iy-5b0"/>
                             <constraint firstItem="L02-mn-07Z" firstAttribute="leading" secondItem="1V5-hc-Azs" secondAttribute="leading" constant="8" id="wiW-7M-I2Q"/>
                         </constraints>
                     </view>
