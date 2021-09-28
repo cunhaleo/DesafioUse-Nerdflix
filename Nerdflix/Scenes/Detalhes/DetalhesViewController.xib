@@ -32,12 +32,31 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twl-ch-5f9">
+                    <rect key="frame" x="20" y="181" width="366" height="339"/>
+                    <string key="text" base64-UTF8="YES">
+U2lub3BzZQM6IExvcmVtIGlwc3VtIGRvbG9yIHNpdCBhbWV0LCBjb25zZWN0ZXR1ciBhZGlwaXNjaW5n
+IGVsaXQsIHNlZCBkbyBlaXVzbW9kIHRlbXBvciBpbmNpZGlkdW50IHV0IGxhYm9yZSBldCBkb2xvcmUg
+bWFnbmEgYWxpcXVhLiBVdCBlbmltIGFkIG1pbmltIHZlbmlhbSwgcXVpcyBub3N0cnVkIGV4ZXJjaXRh
+dGlvbiB1bGxhbWNvIGxhYm9yaXMgbmlzaSB1dCBhbGlxdWlwIGV4IGVhIGNvbW1vZG8gY29uc2VxdWF0
+LiBEdWlzIGF1dGUgaXJ1cmUgZG9sb3IgaW4gcmVwcmVoZW5kZXJpdCBpbiB2b2x1cHRhdGUgdmVsaXQg
+ZXNzZSBjaWxsdW0gZG9sb3JlIGV1IGZ1Z2lhdCBudWxsYSBwYXJpYXR1ci4gRXhjZXB0ZXVyIHNpbnQg
+b2NjYWVjYXQgY3VwaWRhdGF0IG5vbiBwcm9pZGVudCwgc3VudCBpbiBjdWxwYSBxdWkgb2ZmaWNpYSBk
+ZXNlcnVudCBtb2xsaXQgYW5pbSBpZCBlc3QgbGFib3J1bS4
+</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="obW-8G-nMn" secondAttribute="trailing" id="2Vr-Ng-VDu"/>
+                <constraint firstItem="obW-8G-nMn" firstAttribute="top" secondItem="twl-ch-5f9" secondAttribute="bottom" constant="22" id="HWi-t7-jZn"/>
                 <constraint firstItem="obW-8G-nMn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="i44-tm-Odz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="obW-8G-nMn" secondAttribute="bottom" id="njM-jA-MW7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="twl-ch-5f9" secondAttribute="trailing" constant="28" id="wJ7-pH-Nxn"/>
+                <constraint firstItem="twl-ch-5f9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="z3V-TO-QTR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="119.86607142857142"/>
