@@ -16,4 +16,5 @@
 - Popular tela Detalhes com os atores do elenco quando um filme é pressionado.
 - Popular tela Home com os filmes de cada categoria quando o app é carregado.
 
+<img src="images/image1.png"  width="300" > <img src="images/image3.png"  width="300" > <img src="images/image4.png"  width="300" >
 
