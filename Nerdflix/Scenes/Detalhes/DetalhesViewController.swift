@@ -37,10 +37,12 @@ class DetalhesViewController: UIViewController {
             viewModel.getMoviesDetails(movieId)
             setupUI()
             setupCollectionView()
+
         
         }
     func setupUI() {
         title = "Detalhes"
+    
         
         
     }
@@ -66,9 +68,6 @@ class DetalhesViewController: UIViewController {
 }
 extension DetalhesViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -76,7 +75,7 @@ extension DetalhesViewController: UICollectionViewDataSource, UICollectionViewDe
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: (UIScreen.main.bounds.width/3), height: (UIScreen.main.bounds.width/3))
+            return CGSize(width: (120), height: (160))
         }
         
 

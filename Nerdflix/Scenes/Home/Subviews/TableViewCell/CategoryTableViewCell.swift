@@ -42,7 +42,7 @@ class CategoryTableViewCell: UITableViewCell, UINavigationControllerDelegate {
     // MARK: - Methods
     
     private func verMais() {
-        let controller = VerMaisViewController(category: 0) // adicionar categoria como parametro
+        let controller = VerMaisViewController(category: index) // adicionar categoria como parametro
         parentViewController?.navigationController?.pushViewController(controller, animated: true)
     }
     private func showMovieDetails(_ id: String?) {
@@ -60,7 +60,7 @@ class CategoryTableViewCell: UITableViewCell, UINavigationControllerDelegate {
         }
    }
 
-    func setupCell(categoria: String, index: Int){ // Label categoria e botão ver mais
+    func setupCell(categoria: String, index: Int){
         labelCategoria.text = categoria
         self.index = index
         

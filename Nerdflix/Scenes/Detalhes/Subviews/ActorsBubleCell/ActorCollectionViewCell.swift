@@ -14,7 +14,8 @@ class ActorCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageActor: UIImageView!
     
-    @IBOutlet weak var labelActorName: UILabel!
+    @IBOutlet weak var labelActor: UILabel!
+    
     
     
     
@@ -29,14 +30,14 @@ class ActorCollectionViewCell: UICollectionViewCell {
     //MARK: - Methods
     func setupUI() {
         
-        imageActor.layer.cornerRadius = 15
+        imageActor.layer.cornerRadius = 60
         
     }
     
     func setupModel(actor: ActorModel?) {
         guard let actorModel = actor else {return}
         
-        labelActorName.text = actor?.name
+        labelActor.text = actor?.name
         
         guard let urlImage = actor?.image else {return}
         imageActor.sd_setImage(with: URL(string: urlImage))

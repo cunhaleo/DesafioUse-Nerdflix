@@ -18,7 +18,7 @@ class DetalhesViewModel {
     var shouldShowErrorMessage: ((String) -> Void)?
     
     func getMoviesDetails(_ id: String) {
-        AF.request("https://imdb-api.com/en/API/FullCast/k_l8tyyqy7/\(id)", method: .get).responseJSON{ (response) in
+        AF.request("https://imdb-api.com/en/API/FullCast/k_1ff4k2v8/\(id)", method: .get).responseJSON{ (response) in
         //    debugPrint("VER DETALHES: \(response)")
             guard let data = response.data else {return}
                 
