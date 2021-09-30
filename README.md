@@ -3,17 +3,17 @@
 
 :warning: TO DO
 - Colocar TODAS as regras de negógios na ViewModel.
-- Popular VerMaisViewController.
-- Configurar UI da VerMaisViewController.
-- Configuração UI DetalhesViewController.
-- Adicionar filme lançamento fixado na HomeViewController.
+- Adicionar filme lançamento fixado na Home e em Detalhes.
 
 
 :white_check_mark: DONE 
 - Requisição dos Filmes usando Alamofire.
 - Requesição de detalhes do filme usando ID do filme selecionado através do Alamofire.
 - Carregando imagens async usando SDWebImages.
-- Configuração da TableView em HomeViewController
+- TableView configurada em HomeViewController
 - Células da TableView criando CollectionView.
-- Células da CollectionView acessando imagem e nome dos filmes.
-- DetalhesView sendo acessada quando filme é clicado e mostrando atores do filme selecionado.
+- Popular tela VerMais com os filmes da categoria quando o botão 'Ver Mais' é pressionado.
+- Popular tela Detalhes com os atores do elenco quando um filme é pressionado.
+- Popular tela Home com os filmes de cada categoria quando o app é carregado.
+
+
